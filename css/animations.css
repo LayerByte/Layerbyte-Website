@@ -1,0 +1,117 @@
+/* ==========================================================================
+   Animations & Keyframes - LayerByte Theme (3977da, 065ec0, 86a6d5, ffffff)
+   ========================================================================== */
+
+/* Hand wave animation for "Hi There! 👋" */
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.wave-hand {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: wave 2.2s infinite ease-in-out;
+}
+
+/* Floating animation for hero illustration */
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(0.8deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.floating-element {
+  animation: floatAnimation 4.5s ease-in-out infinite;
+}
+
+/* Cosmic Blue Pulse Glow (3977da & 065ec0) */
+@keyframes bluePulse {
+  0% {
+    box-shadow: 0 0 10px rgba(57, 119, 218, 0.3), 0 0 25px rgba(6, 94, 192, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 22px rgba(57, 119, 218, 0.7), 0 0 45px rgba(134, 166, 213, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(57, 119, 218, 0.3), 0 0 25px rgba(6, 94, 192, 0.15);
+  }
+}
+
+.pulse-glow {
+  animation: bluePulse 3s infinite ease-in-out;
+}
+
+/* Preloader spin animation */
+@keyframes spinRing {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinRingReverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Typewriter blinking cursor */
+@keyframes blinkCursor {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  color: var(--primary-blue, #3977da);
+  font-weight: 300;
+  animation: blinkCursor 0.8s infinite;
+}
+
+/* Subtle background gradient shift */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Fade in up for reveal animations */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-in-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}

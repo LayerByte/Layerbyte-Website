@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgPort" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1b0f36"/>
+      <stop offset="100%" stop-color="#0a0416"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="500" height="300" fill="url(#bgPort)"/>
+
+  <!-- Window UI Frame -->
+  <rect x="40" y="30" width="420" height="240" rx="10" fill="#110924" stroke="#c770f0" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="40" y="30" width="420" height="32" rx="10" fill="#1c1138"/>
+  <circle cx="60" cy="46" r="4" fill="#ef4444"/>
+  <circle cx="72" cy="46" r="4" fill="#eab308"/>
+  <circle cx="84" cy="46" r="4" fill="#22c55e"/>
+  <text x="250" y="50" fill="#bfa8d8" font-family="sans-serif" font-size="11" text-anchor="middle" font-weight="600">Soumyajit | Portfolio</text>
+
+  <!-- Hero Content inside mockup -->
+  <g transform="translate(60, 75)">
+    <text x="0" y="25" fill="#f5f3fc" font-family="sans-serif" font-size="16" font-weight="bold">Hi There! 👋🏻</text>
+    <text x="0" y="50" fill="#f5f3fc" font-family="sans-serif" font-size="20" font-weight="900">I'M <tspan fill="#c770f0">SOUMYAJIT</tspan></text>
+    <rect x="0" y="65" width="150" height="20" rx="4" fill="#1c1136" stroke="#623686" stroke-width="1"/>
+    <text x="10" y="79" fill="#c770f0" font-family="monospace" font-size="10">MERN Developer</text>
+
+    <!-- Mini buttons -->
+    <rect x="0" y="98" width="65" height="22" rx="4" fill="#623686"/>
+    <text x="32" y="112" fill="#ffffff" font-family="sans-serif" font-size="9" text-anchor="middle">Projects</text>
+    <rect x="75" y="98" width="65" height="22" rx="4" fill="#1a1133" stroke="#c770f0" stroke-width="1"/>
+    <text x="107" y="112" fill="#c770f0" font-family="sans-serif" font-size="9" text-anchor="middle">Resume</text>
+  </g>
+
+  <!-- Mini Illustration inside mockup -->
+  <g transform="translate(280, 80) scale(0.65)">
+    <circle cx="100" cy="80" r="70" fill="#241544" stroke="#c770f0" stroke-width="2"/>
+    <rect x="60" y="60" width="80" height="50" rx="6" fill="#130b26" stroke="#c770f0" stroke-width="1.5"/>
+    <rect x="75" y="72" width="50" height="4" rx="2" fill="#38bdf8"/>
+    <rect x="75" y="82" width="35" height="4" rx="2" fill="#e879f9"/>
+    <rect x="50" y="115" width="100" height="6" rx="3" fill="#623686"/>
+  </g>
+</svg>

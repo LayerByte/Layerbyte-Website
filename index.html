@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>LayerByte | Portfolio</title>
+  <meta name="description" content="Personal portfolio of LayerByte — Security Tools, Networking, DevSecOps, and Open Source Software.">
+  <meta name="keywords" content="LayerByte, Portfolio, Python, C++, C#, Golang, JavaScript, PHP, Lua, HTML, CSS, .NET">
+  <meta name="author" content="LayerByte">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="LayerByte | Portfolio">
+  <meta property="og:description" content="Personal developer portfolio of LayerByte built with pure HTML, CSS, and JavaScript.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- Preloader Screen -->
+  <div id="preloader">
+    <div class="preloader-spinner">
+      <div class="spinner-ring"></div>
+      <div class="spinner-ring"></div>
+      <div class="preloader-brand">&lt;LB /&gt;</div>
+    </div>
+    <div class="preloader-text">Initializing LayerByte...</div>
+  </div>
+
+  <!-- Cosmic Particle Background Canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <div class="content-wrapper">
+
+    <!-- Fixed Header & Navbar -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="#home" class="brand-logo" aria-label="Home">
+          &lt;<span class="brand-highlight">LayerByte</span> /&gt;
+        </a>
+
+        <!-- Mobile Navigation Toggle -->
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+
+        <!-- Navigation Links (Resume & Contact removed) -->
+        <ul class="nav-links" id="nav-menu">
+          <li class="nav-item">
+            <a href="#home" class="nav-link active">
+              <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#about-intro" class="nav-link">
+              <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+              About
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link">
+              <svg viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
+              Works
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Main Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h2 class="hero-greeting">
+            Hi There! <span class="wave-hand">👋🏻</span>
+          </h2>
+          <h1 class="hero-name">
+            I'M <span class="purple glow-text">LAYERBYTE</span>
+          </h1>
+
+          <div class="hero-typewriter-box">
+            <span class="type-label">I am a</span>
+            <span id="typewriter-text" class="type-target"></span>
+            <span class="typewriter-cursor">|</span>
+          </div>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn-primary">
+              <span>View Pinned Works</span>
+              <svg style="width:18px;height:18px;fill:currentColor" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+            </a>
+            <a href="https://github.com/LayerByte" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+              <svg style="width:18px;height:18px;fill:currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub Profile</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-art-container">
+          <div class="hero-art-glow"></div>
+          <img src="assets/images/hero-developer.svg" alt="LayerByte Developer Illustration" class="hero-illustration floating-element">
+        </div>
+      </div>
+    </section>
+
+    <!-- Home 2: Self-Introduction Section -->
+    <section id="about-intro" class="section intro-section">
+      <div class="container">
+        <div class="intro-grid">
+          <div class="intro-content">
+            <h2>LET ME <span class="purple">INTRODUCE</span> MYSELF</h2>
+            <p class="intro-text">
+              I am passionate about systems programming, defensive cybersecurity, network diagnostics, and building reliable open-source tools. ⚡
+            </p>
+            <p class="intro-text">
+              Based in the <b>Czech Republic</b> and affiliated with <b>EuropeanAcademy</b>, I actively design and maintain open-source projects.
+            </p>
+            <p class="intro-text">
+              My engineering stack spans <b>Python, C++, C#, Golang, JavaScript, PHP, Lua, HTML, CSS, and .NET</b>.
+            </p>
+            <p class="intro-text">
+              My focus is on <b>Security Tools ✦ Networking ✦ DevSecOps ✦ Open Source</b>.
+            </p>
+          </div>
+
+          <div class="intro-avatar-wrapper">
+            <div class="avatar-card tilt-effect">
+              <div class="avatar-img-inner">
+                <img src="assets/images/avatar.svg" alt="LayerByte Avatar" class="avatar-svg">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Connect Ribbon -->
+        <div class="find-me-section">
+          <h3>FIND ME ON</h3>
+          <p>Feel free to <span class="purple">connect</span> with LayerByte</p>
+          <div class="social-icons-row">
+            <a href="https://github.com/LayerByte" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub">
+              <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Detailed / Skills & GitHub Stats Section -->
+    <section id="about" class="section">
+      <div class="container">
+        
+        <!-- Bio Card & Interests -->
+        <div class="about-bio-grid">
+          <div class="about-text-col">
+            <h2 class="section-title">Know Who <span class="purple">I'M</span></h2>
+            <p style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 16px;">
+              Hi Everyone, I am <span class="purple" style="font-weight:700;">LayerByte</span> from <span class="purple">Czech Republic</span>.
+            </p>
+            <p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 20px;">
+              Working with <b>EuropeanAcademy</b> and maintaining security utilities including certificate inspectors, DNS monitors, endpoint checkers, and web shields.
+            </p>
+            <p style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 12px;">
+              Core technical specialties:
+            </p>
+            <ul class="activities-list">
+              <li>
+                <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+                <span>Security Tools &amp; Defensive File Inspection</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+                <span>High Performance Systems (C++, Go, C#, Python)</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                <span>Networking, DNS &amp; DevSecOps Tooling</span>
+              </li>
+            </ul>
+
+            <div class="about-quote-card">
+              <p class="about-quote-text">"Security Tools ✦ Networking ✦ DevSecOps ✦ Open Source"</p>
+              <p class="about-quote-author">— LayerByte</p>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:center; align-items:center;">
+            <div style="position:relative; max-width:380px; width:100%;">
+              <img src="assets/images/layerbyte-portfolio.svg" alt="LayerByte Concept" style="width:100%; border-radius:14px; box-shadow:var(--shadow-card);" class="floating-element">
+            </div>
+          </div>
+        </div>
+
+        <!-- Professional Skillset (10 Skills) -->
+        <div class="section-header">
+          <h2 class="section-title">Professional <span class="purple">Skillset</span></h2>
+          <p class="section-subtitle">Core languages, frameworks, and programming runtimes</p>
+        </div>
+
+        <div class="skills-grid" style="grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));">
+          
+          <!-- 1. Python -->
+          <div class="skill-card tilt-effect">
+            <div class="skill-icon-wrap">
+              <svg viewBox="0 0 128 128"><path fill="#3776AB" d="M63.5 10c-26.7 0-25 11.6-25 11.6l.03 12h25.5v3.6H28.4S10 35.1 10 61.8s16.1 25.7 16.1 25.7h9.6v-13.6s-.5-16.1 15.8-16.1h25.2s15.3-.2 15.3-15.1V25.1S88.6 10 63.5 10zM50.4 20.8a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9z"/><path fill="#86A6D5" d="M64.5 118c26.7 0 25-11.6 25-11.6l-.03-12H64v-3.6h35.6s18.4 2.1 18.4-24.6-16.1-25.7-16.1-25.7h-9.6v13.6s.5 16.1-15.8 16.1H51.9s-15.3.2-15.3 15.1v17.6s3.4 15.1 28.5 15.1zm13.1-10.8a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9z"/></svg>
+            </div>
+            <span class="skill-name">Python</span>
+          </div>
+
+          <!-- 2. C++ -->
+          <div class="skill-card tilt-effect">
+            <div class="skill-icon-wrap">
+              <svg viewBox="0 0 128 128"><path fill="#065EC0" d="M117.8 82.2L68.7 110.5c-2.9 1.7-6.5 1.7-9.4 0L10.2 82.2c-2.9-1.7-4.7-4.8-4.7-8.1V17.9c0-3.3 1.8-6.4 4.7-8.1L59.3 1.5c2.9-1.7 6.5-1.7 9.4 0l49.1 28.3c2.9 1.7 4.7 4.8 4.7 8.1v36.2c0 3.3-1.8 6.4-4.7 8.1z"/><text x="36" y="80" fill="#ffffff" font-size="44" font-weight="bold" font-family="sans-serif">C++</text></svg>
+            </div>
+            <span class="skill-name">C++</span>
+          </div>
+
+          <!-- 3. C# -->
+          <div class="skill-card tilt-effect">
+            <div class="skill-icon-wrap">
+              <svg viewBox="0 0 128 128"><polygon points="64,10 114,38 114,90 64,118 14,90 14,38" fill="#065EC0"/><circle cx="64" cy="64" r="38" fill="#0E2245" stroke="#3977DA" stroke-width="2"/><text x="38" y="77" fill="#ffffff" font-size="40" font-weight="bold" font-family="sans-serif">C#</text></svg>
+            </div>
+            <span class="skill-name">C#</span>
+          </div>
+
+          <!-- 4. Golang (Goland) -->
+          <div class="skill-card tilt-effect">
+            <div class="skill-icon-wrap">
+              <svg viewBox="0 0 128 128"><rect width="128" height="128" rx="16" fill="#00ADD8"/><text x="24" y="82" fill="#ffffff" font-size="52" font-weight="bold" font-family="sans-serif">Go</text></svg>
+            </div>
+            <span class="skill-name">Golang</span>
+          </div>
+
+          <!-- 5. JavaScript -->
+          <div class="skill-card tilt-effect">
+            <div class="skill-icon-wrap">
+              <svg viewBox="0 0 128 128"><rect width="128" height="128" rx="16" fill="#F7DF1E"/><path d="M100.3 84.8c-2.3-3.7-6.2-6.5-13.8-9.6-4.6-1.9-6.3-3.1-6.3-5.5 0-2.2 1.8-3.8 5-3.8 3 0 4.9 1.2 6.8 4.2l9.6-6c-3.6-5.8-8.9-8.4-16.4-8.4-9.9 0-16.7 6-16.7 15.3 0 7.8 4.7 12.3 13.9 16 5.3 2.1 6.8 3.5 6.8 6.1 0 2.6-2.4 4.4-6.4 4.4-5.2 0-7.7-2.6-10.3-6.9l-9.9 5.8c4.2 8 10.4 11.6 20.2 11.6 11.8 0 18.2-6.2 18.2-15.6 0-.2-.2-4.9-.7-7.6zM46.7 56.6h11.9V99c0 8.4-4.4 13.5-12.7 13.5-4.2 0-7.7-1.3-10.4-3.6l4.9-8.4c1.8 1.4 3.7 2.1 5.5 2.1 2.9 0 4.7-1.7 4.7-5.5V56.6z"/></svg>
+            </div>
+            <span class="skill-name">JavaScript</span>
+          </div>
+
+          <!-- 6. PHP -->
+          <div class="skill-card tilt-effect">
+            <div class="skill-icon-wrap">
+              <svg viewBox="0 0 128 128"><ellipse cx="64" cy="64" rx="58" ry="34" fill="#777BB4"/><ellipse cx="64" cy="64" rx="52" ry="28" fill="#4F5B93"/><text x="26" y="74" fill="#ffffff" font-size="34" font-weight="bold" font-family="sans-serif">php</text></svg>
+            </div>
+            <span class="skill-name">PHP</span>
+          </div>
+
+          <!-- 7. Lua -->
+          <div class="skill-card tilt-effect">
+            <div class="skill-icon-wrap">
+              <svg viewBox="0 0 128 128"><circle cx="64" cy="64" r="50" fill="#065EC0"/><circle cx="56" cy="56" r="32" fill="#000080"/><circle cx="94" cy="34" r="12" fill="#3977DA"/><circle cx="94" cy="34" r="7" fill="#ffffff"/><text x="44" y="66" fill="#ffffff" font-size="22" font-weight="bold" font-family="sans-serif">Lua</text></svg>
+            </div>
+            <span class="skill-name">Lua</span>
+          </div>
+
+          <!-- 8. HTML -->
+          <div class="skill-card tilt-effect">
+            <div class="skill-icon-wrap">
+              <svg viewBox="0 0 128 128"><path fill="#E34F26" d="M19 116L9 4h110l-10 112-45 12z"/><path fill="#EF652A" d="M64 118l36-10 8-94H64z"/><path fill="#ECECEC" d="M64 52H46l-2-20h40l2-20H23l5 60h36zm0 43l-19-5-1-14H24l2 28 38 10z"/><path fill="#FFF" d="M64 52h18l-2 20-16 5v20l29-8 3-37H64zm0-40h39l-2 20H64z"/></svg>
+            </div>
+            <span class="skill-name">HTML5</span>
+          </div>
+
+          <!-- 9. CSS -->
+          <div class="skill-card tilt-effect">
+            <div class="skill-icon-wrap">
+              <svg viewBox="0 0 128 128"><path fill="#1572B6" d="M19 116L9 4h110l-10 112-45 12z"/><path fill="#33A9DC" d="M64 118l36-10 8-94H64z"/><path fill="#ECECEC" d="M64 52H46l-2-20h40l2-20H23l5 60h36zm0 43l-19-5-1-14H24l2 28 38 10z"/><path fill="#FFF" d="M64 52h18l-2 20-16 5v20l29-8 3-37H64zm0-40h39l-2 20H64z"/></svg>
+            </div>
+            <span class="skill-name">CSS3</span>
+          </div>
+
+          <!-- 10. .NET -->
+          <div class="skill-card tilt-effect">
+            <div class="skill-icon-wrap">
+              <svg viewBox="0 0 128 128"><circle cx="64" cy="64" r="56" fill="#512BD4"/><text x="20" y="74" fill="#ffffff" font-size="32" font-weight="bold" font-family="sans-serif">.NET</text></svg>
+            </div>
+            <span class="skill-name">.NET</span>
+          </div>
+
+        </div>
+
+    <!-- Projects / LayerByte Works Section (LIVE PINNED FROM GITHUB) -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="pinned-live-pill">
+            <span class="live-pulse-dot"></span>
+            <span>GITHUB PINNED PROJECTS</span>
+          </div>
+          <h2 class="section-title">LayerByte <span class="purple">Works</span></h2>
+          <p class="section-subtitle">
+            All my pinned projects from : <a href="https://github.com/LayerByte" target="_blank" rel="noopener noreferrer" style="color:var(--primary-blue); text-decoration:underline; font-weight:600;">github.com/LayerByte</a>.
+          </p>
+        </div>
+
+        <!-- Live Pinned Project Cards Grid (synced from GitHub) -->
+        <div class="projects-grid" id="pinned-projects-grid">
+          <div class="projects-loading">
+            <span class="live-pulse-dot"></span>
+            <span>Loading pinned repositories...</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-main">
+          <div class="footer-credits">
+            <span class="footer-dot"></span>
+            Designed &amp; Developed by <strong>@LayerByte</strong>
+          </div>
+          <div class="footer-copy">
+            Copyright &#169; <span id="current-year">2026</span> LayerByte
+          </div>
+        </div>
+
+        <nav class="footer-socials" aria-label="Social links">
+          <a href="https://github.com/LayerByte" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="GitHub" title="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>GitHub</span>
+          </a>
+          <a href="https://dev.to/layerbyte" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="DEV Community" title="DEV Community">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 8.5h-2v7h2c1.66 0 3-1.34 3-3v-1c0-1.66-1.34-3-3-3zm1 4c0 .55-.45 1-1 1h-.5v-3h.5c.55 0 1 .45 1 1v1zM12 8.5h5v2h-3v.5h2.5v2H14v.5h3v2h-5v-7zM2 5.5h20v13H2v-13zm2 2v9h16v-9H4z"/></svg>
+            <span>DEV</span>
+          </a>
+          <a href="https://x.com/LayerByte0" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="X / Twitter" title="X / Twitter">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.77 7.74L23.2 22h-6.24l-4.89-6.39L6.48 22H3.37l7.24-8.28L2.8 2h6.4l4.42 5.84L18.9 2zm-1.1 17.9h1.73L8.25 3.98H6.4L17.8 19.9z"/></svg>
+            <span>Twitter</span>
+          </a>
+          <a href="https://linktr.ee/LayerByte" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Linktree" title="Linktree">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 2h2v5h4l-5 5-5-5h4V2zm-6 9h14v2H5v-2zm4 4h6v2H9v-2zm2 2h2v5h-2v-5z"/></svg>
+            <span>Linktree</span>
+          </a>
+          <a href="https://www.linkedin.com/in/layer-byte-9b7856438/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5H3V21h3.5V8.5zM4.75 3A2.05 2.05 0 1 0 4.75 7.1 2.05 2.05 0 0 0 4.75 3zM21 13.85c0-3.77-2.01-5.52-4.69-5.52-2.16 0-3.13 1.19-3.67 2.02V8.5H9.15V21h3.49v-6.19c0-1.63.31-3.2 2.32-3.2 1.98 0 2.01 1.85 2.01 3.31V21H21v-7.15z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- Scroll To Top Floating Rocket Button -->
+    <button id="scroll-top-btn" class="scroll-top-btn" aria-label="Scroll to top">
+      <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+    </button>
+
+  </div>
+
+  <!-- JavaScript Scripts -->
+  <script src="js/particles.js"></script>
+  <script src="js/typewriter.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

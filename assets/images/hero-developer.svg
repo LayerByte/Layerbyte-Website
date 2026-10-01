@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3977da"/>
+      <stop offset="100%" stop-color="#065ec0"/>
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0e1f3d"/>
+      <stop offset="100%" stop-color="#050d1c"/>
+    </linearGradient>
+    <linearGradient id="neonGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3977da"/>
+      <stop offset="50%" stop-color="#86a6d5"/>
+      <stop offset="100%" stop-color="#065ec0"/>
+    </linearGradient>
+    <filter id="glowFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient background glow elements -->
+  <circle cx="300" cy="250" r="180" fill="url(#blueGrad)" opacity="0.18" filter="url(#glowFilter)"/>
+  
+  <!-- Floating decorative code particles -->
+  <g opacity="0.85" class="floating-element">
+    <rect x="60" y="80" width="130" height="70" rx="8" fill="#091730" stroke="#3977da" stroke-width="1.5"/>
+    <circle cx="75" cy="95" r="4" fill="#ef4444"/>
+    <circle cx="87" cy="95" r="4" fill="#eab308"/>
+    <circle cx="99" cy="95" r="4" fill="#22c55e"/>
+    <rect x="75" y="110" width="70" height="4" rx="2" fill="#3977da"/>
+    <rect x="75" y="122" width="100" height="4" rx="2" fill="#065ec0"/>
+    <rect x="75" y="134" width="50" height="4" rx="2" fill="#86a6d5"/>
+  </g>
+
+  <!-- Floating bracket badge -->
+  <g opacity="0.9">
+    <circle cx="510" cy="110" r="32" fill="#0b1b38" stroke="#3977da" stroke-width="2" filter="url(#glowFilter)"/>
+    <text x="510" y="118" fill="#86a6d5" font-family="monospace" font-size="22" font-weight="bold" text-anchor="middle">&lt;LB/&gt;</text>
+  </g>
+
+  <!-- Floating Binary / Network Atom symbol -->
+  <g opacity="0.75" transform="translate(470, 310) scale(0.6)">
+    <ellipse cx="60" cy="60" rx="45" ry="18" fill="none" stroke="#3977da" stroke-width="3" transform="rotate(30 60 60)"/>
+    <ellipse cx="60" cy="60" rx="45" ry="18" fill="none" stroke="#86a6d5" stroke-width="3" transform="rotate(90 60 60)"/>
+    <ellipse cx="60" cy="60" rx="45" ry="18" fill="none" stroke="#065ec0" stroke-width="3" transform="rotate(150 60 60)"/>
+    <circle cx="60" cy="60" r="8" fill="#ffffff"/>
+  </g>
+
+  <!-- Programmer Desk Base -->
+  <path d="M 80 410 L 520 410 L 540 430 L 60 430 Z" fill="#13274f" stroke="#065ec0" stroke-width="2"/>
+  <rect x="110" y="430" width="16" height="60" fill="#0a152d"/>
+  <rect x="474" y="430" width="16" height="60" fill="#0a152d"/>
+
+  <!-- Main Dual Monitor Setup -->
+  <!-- Left Vertical Monitor -->
+  <rect x="110" y="170" width="100" height="190" rx="8" fill="url(#screenGrad)" stroke="#3977da" stroke-width="2"/>
+  <rect x="145" y="360" width="30" height="45" fill="#0b1a36"/>
+  <rect x="130" y="405" width="60" height="6" rx="3" fill="#065ec0"/>
+  <!-- Code lines on vertical screen -->
+  <rect x="120" y="190" width="60" height="4" rx="2" fill="#3977da" opacity="0.85"/>
+  <rect x="120" y="202" width="75" height="4" rx="2" fill="#86a6d5" opacity="0.85"/>
+  <rect x="128" y="214" width="55" height="4" rx="2" fill="#38bdf8" opacity="0.85"/>
+  <rect x="128" y="226" width="68" height="4" rx="2" fill="#ffffff" opacity="0.85"/>
+  <rect x="120" y="238" width="40" height="4" rx="2" fill="#065ec0" opacity="0.85"/>
+  <rect x="120" y="255" width="70" height="4" rx="2" fill="#3977da" opacity="0.85"/>
+  <rect x="128" y="267" width="50" height="4" rx="2" fill="#86a6d5" opacity="0.85"/>
+  <rect x="128" y="279" width="62" height="4" rx="2" fill="#38bdf8" opacity="0.85"/>
+  <rect x="120" y="291" width="45" height="4" rx="2" fill="#ffffff" opacity="0.85"/>
+
+  <!-- Right Horizontal Main Curved Monitor -->
+  <rect x="230" y="140" width="250" height="170" rx="10" fill="url(#screenGrad)" stroke="#3977da" stroke-width="2.5" filter="url(#glowFilter)"/>
+  <rect x="230" y="140" width="250" height="170" rx="10" fill="url(#screenGrad)" stroke="#3977da" stroke-width="2"/>
+  <!-- Top bar of IDE -->
+  <path d="M 230 150 A 10 10 0 0 1 240 140 L 470 140 A 10 10 0 0 1 480 150 L 480 165 L 230 165 Z" fill="#0c1b38"/>
+  <circle cx="245" cy="152" r="3.5" fill="#ef4444"/>
+  <circle cx="256" cy="152" r="3.5" fill="#eab308"/>
+  <circle cx="267" cy="152" r="3.5" fill="#22c55e"/>
+  <text x="355" y="156" fill="#86a6d5" font-family="monospace" font-size="9" text-anchor="middle">LayerByte - entropyx.cpp</text>
+  <!-- Main IDE code and UI mockup -->
+  <rect x="242" y="178" width="80" height="6" rx="3" fill="#3977da"/>
+  <rect x="242" y="192" width="140" height="6" rx="3" fill="#86a6d5"/>
+  <rect x="255" y="206" width="110" height="6" rx="3" fill="#ffffff"/>
+  <rect x="255" y="220" width="160" height="6" rx="3" fill="#065ec0"/>
+  <rect x="268" y="234" width="90" height="6" rx="3" fill="#3977da"/>
+  <rect x="242" y="252" width="120" height="6" rx="3" fill="#86a6d5"/>
+  <rect x="242" y="266" width="70" height="6" rx="3" fill="#065ec0"/>
+  <!-- Monitor stand -->
+  <rect x="340" y="310" width="30" height="95" fill="#0b1730"/>
+  <ellipse cx="355" cy="406" rx="45" ry="8" fill="#065ec0"/>
+
+  <!-- Mechanical Keyboard with Underglow -->
+  <ellipse cx="340" cy="416" rx="85" ry="12" fill="#3977da" opacity="0.35" filter="url(#glowFilter)"/>
+  <rect x="270" y="398" width="140" height="24" rx="4" fill="#09152b" stroke="#3977da" stroke-width="1.2"/>
+  <g fill="#143163">
+    <rect x="276" y="402" width="12" height="6" rx="1.5"/>
+    <rect x="292" y="402" width="12" height="6" rx="1.5"/>
+    <rect x="308" y="402" width="12" height="6" rx="1.5"/>
+    <rect x="324" y="402" width="12" height="6" rx="1.5"/>
+    <rect x="340" y="402" width="12" height="6" rx="1.5"/>
+    <rect x="356" y="402" width="12" height="6" rx="1.5"/>
+    <rect x="372" y="402" width="12" height="6" rx="1.5"/>
+    <rect x="388" y="402" width="16" height="6" rx="1.5"/>
+
+    <rect x="276" y="411" width="18" height="6" rx="1.5"/>
+    <rect x="298" y="411" width="55" height="6" rx="1.5" fill="#3977da"/>
+    <rect x="357" y="411" width="14" height="6" rx="1.5"/>
+    <rect x="375" y="411" width="29" height="6" rx="1.5"/>
+  </g>
+
+  <!-- Mouse -->
+  <rect x="430" y="402" width="18" height="28" rx="8" fill="#0f2247" stroke="#3977da" stroke-width="1"/>
+  <line x1="439" y1="404" x2="439" y2="414" stroke="#86a6d5" stroke-width="1.5"/>
+
+  <!-- Coffee Mug -->
+  <rect x="220" y="395" width="22" height="24" rx="3" fill="#065ec0" stroke="#3977da" stroke-width="1"/>
+  <path d="M 242 400 Q 250 407 242 414" fill="none" stroke="#86a6d5" stroke-width="2"/>
+  <path d="M 226 388 Q 224 380 228 375" fill="none" stroke="#86a6d5" stroke-width="1.5" opacity="0.7"/>
+  <path d="M 233 388 Q 235 380 231 375" fill="none" stroke="#86a6d5" stroke-width="1.5" opacity="0.7"/>
+</svg>

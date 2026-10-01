@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgHash" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1733"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="500" height="300" fill="url(#bgHash)"/>
+
+  <!-- Window UI Frame -->
+  <rect x="40" y="30" width="420" height="240" rx="10" fill="#071329" stroke="#3977da" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="40" y="30" width="420" height="32" rx="10" fill="#0d2042"/>
+  <circle cx="60" cy="46" r="4" fill="#ef4444"/>
+  <circle cx="72" cy="46" r="4" fill="#eab308"/>
+  <circle cx="84" cy="46" r="4" fill="#22c55e"/>
+  <text x="250" y="50" fill="#86a6d5" font-family="sans-serif" font-size="11" text-anchor="middle" font-weight="600">hashpanel — Browser Web Crypto Hashing Suite</text>
+
+  <!-- Input and Hashes Panel -->
+  <g transform="translate(65, 75)">
+    <!-- Input Box -->
+    <rect x="0" y="0" width="370" height="36" rx="6" fill="#060e1f" stroke="#065ec0" stroke-width="1"/>
+    <text x="14" y="23" fill="#86a6d5" font-family="monospace" font-size="10">payload.tar.gz [Integrity Check]</text>
+
+    <!-- Hash results list -->
+    <!-- SHA-256 -->
+    <g transform="translate(0, 46)">
+      <rect x="0" y="0" width="370" height="32" rx="4" fill="#0d2040" stroke="#3977da" stroke-width="1"/>
+      <text x="12" y="20" fill="#86a6d5" font-family="sans-serif" font-size="9" font-weight="bold">SHA-256</text>
+      <text x="80" y="20" fill="#ffffff" font-family="monospace" font-size="9">e3b0c44298fc1c149afbf4c8996fb924...</text>
+    </g>
+
+    <!-- SHA-512 -->
+    <g transform="translate(0, 84)">
+      <rect x="0" y="0" width="370" height="32" rx="4" fill="#08152e" stroke="#065ec0" stroke-width="1"/>
+      <text x="12" y="20" fill="#86a6d5" font-family="sans-serif" font-size="9" font-weight="bold">SHA-512</text>
+      <text x="80" y="20" fill="#ffffff" font-family="monospace" font-size="9">cf83e1357eefb8bdf1542850d66d8007...</text>
+    </g>
+
+    <!-- MD5 -->
+    <g transform="translate(0, 122)">
+      <rect x="0" y="0" width="370" height="32" rx="4" fill="#08152e" stroke="#065ec0" stroke-width="1"/>
+      <text x="12" y="20" fill="#86a6d5" font-family="sans-serif" font-size="9" font-weight="bold">MD5</text>
+      <text x="80" y="20" fill="#3977da" font-family="monospace" font-size="9">d41d8cd98f00b204e9800998ecf8427e</text>
+    </g>
+  </g>
+</svg>

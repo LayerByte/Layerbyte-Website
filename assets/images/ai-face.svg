@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgFace" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#150e2d"/>
+      <stop offset="100%" stop-color="#0b0617"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="500" height="300" fill="url(#bgFace)"/>
+
+  <!-- Window UI Frame -->
+  <rect x="40" y="30" width="420" height="240" rx="10" fill="#130b26" stroke="#c770f0" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="40" y="30" width="420" height="32" rx="10" fill="#1e123a"/>
+  <circle cx="60" cy="46" r="4" fill="#ef4444"/>
+  <circle cx="72" cy="46" r="4" fill="#eab308"/>
+  <circle cx="84" cy="46" r="4" fill="#22c55e"/>
+  <text x="250" y="50" fill="#bfa8d8" font-family="sans-serif" font-size="11" text-anchor="middle" font-weight="600">Face_AI — Realtime Biometric Recognition</text>
+
+  <!-- Face Wireframe Grid -->
+  <g transform="translate(160, 80)">
+    <!-- Bounding Box -->
+    <rect x="0" y="0" width="180" height="150" rx="8" fill="none" stroke="#c770f0" stroke-width="2"/>
+    <!-- Corner brackets -->
+    <path d="M 0 20 L 0 0 L 20 0" fill="none" stroke="#a855f7" stroke-width="3"/>
+    <path d="M 160 0 L 180 0 L 180 20" fill="none" stroke="#a855f7" stroke-width="3"/>
+    <path d="M 0 130 L 0 150 L 20 150" fill="none" stroke="#a855f7" stroke-width="3"/>
+    <path d="M 160 150 L 180 150 L 180 130" fill="none" stroke="#a855f7" stroke-width="3"/>
+
+    <!-- Face Silhouette wireframe -->
+    <ellipse cx="90" cy="75" rx="42" ry="54" fill="rgba(199, 112, 240, 0.1)" stroke="#8b5cf6" stroke-width="1.5"/>
+    <!-- Eye Landmark dots -->
+    <circle cx="72" cy="65" r="3" fill="#38bdf8"/>
+    <circle cx="108" cy="65" r="3" fill="#38bdf8"/>
+    <!-- Nose Landmark dot -->
+    <circle cx="90" cy="80" r="3" fill="#34d399"/>
+    <!-- Mouth Landmark dots -->
+    <circle cx="78" cy="98" r="2.5" fill="#f43f5e"/>
+    <circle cx="90" cy="102" r="2.5" fill="#f43f5e"/>
+    <circle cx="102" cy="98" r="2.5" fill="#f43f5e"/>
+
+    <!-- Mesh lines connecting points -->
+    <line x1="72" y1="65" x2="90" y2="80" stroke="#c770f0" stroke-width="1" stroke-dasharray="2 2"/>
+    <line x1="108" y1="65" x2="90" y2="80" stroke="#c770f0" stroke-width="1" stroke-dasharray="2 2"/>
+    <line x1="78" y1="98" x2="90" y2="80" stroke="#c770f0" stroke-width="1" stroke-dasharray="2 2"/>
+    <line x1="102" y1="98" x2="90" y2="80" stroke="#c770f0" stroke-width="1" stroke-dasharray="2 2"/>
+  </g>
+
+  <!-- Tag badge on top of bounding box -->
+  <rect x="160" y="62" width="110" height="18" rx="4" fill="#c770f0"/>
+  <text x="215" y="75" fill="#0b0617" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Confidence: 99.2%</text>
+</svg>

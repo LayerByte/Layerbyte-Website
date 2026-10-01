@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgEditor" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#190e33"/>
+      <stop offset="100%" stop-color="#0e071c"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="500" height="300" fill="url(#bgEditor)"/>
+
+  <!-- Window UI Frame -->
+  <rect x="40" y="30" width="420" height="240" rx="10" fill="#130b26" stroke="#c770f0" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="40" y="30" width="420" height="32" rx="10" fill="#1e123a"/>
+  <circle cx="60" cy="46" r="4" fill="#ef4444"/>
+  <circle cx="72" cy="46" r="4" fill="#eab308"/>
+  <circle cx="84" cy="46" r="4" fill="#22c55e"/>
+  <text x="250" y="50" fill="#bfa8d8" font-family="sans-serif" font-size="11" text-anchor="middle" font-weight="600">Editor.io — Web Code Studio</text>
+
+  <!-- Left Editor Pane -->
+  <rect x="40" y="62" width="210" height="208" fill="#150d2c"/>
+  <rect x="40" y="62" width="210" height="24" fill="#1e133c"/>
+  <text x="55" y="78" fill="#c770f0" font-family="monospace" font-size="10">index.html</text>
+
+  <text x="50" y="105" fill="#f43f5e" font-family="monospace" font-size="10">&lt;div class="hero"&gt;</text>
+  <text x="62" y="123" fill="#38bdf8" font-family="monospace" font-size="10">  &lt;h1&gt;Live Code&lt;/h1&gt;</text>
+  <text x="62" y="141" fill="#4ade80" font-family="monospace" font-size="10">  &lt;button&gt;Run&lt;/button&gt;</text>
+  <text x="50" y="159" fill="#f43f5e" font-family="monospace" font-size="10">&lt;/div&gt;</text>
+
+  <!-- Divider -->
+  <line x1="250" y1="62" x2="250" y2="270" stroke="#623686" stroke-width="2"/>
+
+  <!-- Right Preview Pane -->
+  <rect x="251" y="62" width="209" height="208" fill="#0d0618"/>
+  <rect x="251" y="62" width="209" height="24" fill="#1b1035"/>
+  <text x="265" y="78" fill="#a493c4" font-family="sans-serif" font-size="10">Preview (Browser)</text>
+
+  <!-- Rendered live component -->
+  <rect x="275" y="105" width="160" height="135" rx="8" fill="#20133b" stroke="#c770f0" stroke-width="1"/>
+  <text x="355" y="135" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Live Code</text>
+  <text x="355" y="155" fill="#a493c4" font-family="sans-serif" font-size="9" text-anchor="middle">Instant hot-reloading</text>
+  <rect x="315" y="180" width="80" height="24" rx="4" fill="#c770f0"/>
+  <text x="355" y="196" fill="#130b26" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Run Code</text>
+</svg>

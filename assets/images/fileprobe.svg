@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgProbe" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a162b"/>
+      <stop offset="100%" stop-color="#030814"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="500" height="300" fill="url(#bgProbe)"/>
+
+  <!-- Window UI Frame -->
+  <rect x="40" y="30" width="420" height="240" rx="10" fill="#071329" stroke="#3977da" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="40" y="30" width="420" height="32" rx="10" fill="#0d2042"/>
+  <circle cx="60" cy="46" r="4" fill="#ef4444"/>
+  <circle cx="72" cy="46" r="4" fill="#eab308"/>
+  <circle cx="84" cy="46" r="4" fill="#22c55e"/>
+  <text x="250" y="50" fill="#86a6d5" font-family="sans-serif" font-size="11" text-anchor="middle" font-weight="600">fileprobe — Binary Header &amp; Metadata Inspector (C++)</text>
+
+  <!-- ELF / PE Header Parsing Grid -->
+  <g transform="translate(60, 75)">
+    <!-- Header Block -->
+    <rect x="0" y="0" width="380" height="60" rx="6" fill="#0d2145" stroke="#3977da" stroke-width="1"/>
+    <text x="16" y="24" fill="#86a6d5" font-family="monospace" font-size="11">MAGIC: \x7fELF (64-bit LSB Executable)</text>
+    <text x="16" y="44" fill="#ffffff" font-family="monospace" font-size="10">Entry Point: 0x0000000000401020 | Arch: x86_64</text>
+
+    <!-- Sections Breakdown -->
+    <g transform="translate(0, 75)">
+      <!-- .text section -->
+      <rect x="0" y="0" width="115" height="95" rx="6" fill="#050e1f" stroke="#065ec0" stroke-width="1"/>
+      <rect x="0" y="0" width="115" height="24" rx="6" fill="#0b1b38"/>
+      <text x="57" y="16" fill="#3977da" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">.text</text>
+      <text x="12" y="45" fill="#86a6d5" font-family="monospace" font-size="9">Size: 42.8 KB</text>
+      <text x="12" y="65" fill="#86a6d5" font-family="monospace" font-size="9">Flags: [R-X]</text>
+      <text x="12" y="85" fill="#ffffff" font-family="monospace" font-size="9">Code Exec</text>
+
+      <!-- .rodata section -->
+      <rect x="132" y="0" width="115" height="95" rx="6" fill="#050e1f" stroke="#3977da" stroke-width="1"/>
+      <rect x="132" y="0" width="115" height="24" rx="6" fill="#0b1b38"/>
+      <text x="189" y="16" fill="#86a6d5" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">.rodata</text>
+      <text x="144" y="45" fill="#86a6d5" font-family="monospace" font-size="9">Size: 12.1 KB</text>
+      <text x="144" y="65" fill="#86a6d5" font-family="monospace" font-size="9">Flags: [R--]</text>
+      <text x="144" y="85" fill="#ffffff" font-family="monospace" font-size="9">Constants</text>
+
+      <!-- .data section -->
+      <rect x="265" y="0" width="115" height="95" rx="6" fill="#050e1f" stroke="#065ec0" stroke-width="1"/>
+      <rect x="265" y="0" width="115" height="24" rx="6" fill="#0b1b38"/>
+      <text x="322" y="16" fill="#3977da" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">.data</text>
+      <text x="277" y="45" fill="#86a6d5" font-family="monospace" font-size="9">Size: 6.4 KB</text>
+      <text x="277" y="65" fill="#86a6d5" font-family="monospace" font-size="9">Flags: [RW-]</text>
+      <text x="277" y="85" fill="#ffffff" font-family="monospace" font-size="9">Globals</text>
+    </g>
+  </g>
+</svg>

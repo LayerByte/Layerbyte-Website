@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgEnt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e1f3d"/>
+      <stop offset="100%" stop-color="#040914"/>
+    </linearGradient>
+    <linearGradient id="curveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#065ec0"/>
+      <stop offset="50%" stop-color="#3977da"/>
+      <stop offset="100%" stop-color="#86a6d5"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="500" height="300" fill="url(#bgEnt)"/>
+
+  <!-- Window UI Frame -->
+  <rect x="40" y="30" width="420" height="240" rx="10" fill="#08142b" stroke="#3977da" stroke-width="1.5" stroke-opacity="0.5"/>
+  <rect x="40" y="30" width="420" height="32" rx="10" fill="#0e2247"/>
+  <circle cx="60" cy="46" r="4" fill="#ef4444"/>
+  <circle cx="72" cy="46" r="4" fill="#eab308"/>
+  <circle cx="84" cy="46" r="4" fill="#22c55e"/>
+  <text x="250" y="50" fill="#86a6d5" font-family="sans-serif" font-size="11" text-anchor="middle" font-weight="600">entropyx — Shannon File Entropy Calculator (C++)</text>
+
+  <!-- Left: Entropy Graph Curve -->
+  <g transform="translate(60, 80)">
+    <rect x="0" y="0" width="230" height="150" rx="8" fill="#050e1f" stroke="#065ec0" stroke-width="1"/>
+    
+    <!-- Grid lines -->
+    <line x1="20" y1="30" x2="210" y2="30" stroke="#0e2247" stroke-width="1" stroke-dasharray="2 2"/>
+    <line x1="20" y1="70" x2="210" y2="70" stroke="#0e2247" stroke-width="1" stroke-dasharray="2 2"/>
+    <line x1="20" y1="110" x2="210" y2="110" stroke="#0e2247" stroke-width="1" stroke-dasharray="2 2"/>
+
+    <!-- Shannon Entropy Curve Line -->
+    <path d="M 20 120 Q 50 110 70 85 T 120 40 T 160 55 T 210 35" fill="none" stroke="url(#curveGrad)" stroke-width="3"/>
+    
+    <!-- Shaded area under curve -->
+    <path d="M 20 120 Q 50 110 70 85 T 120 40 T 160 55 T 210 35 L 210 135 L 20 135 Z" fill="rgba(57, 119, 218, 0.15)"/>
+
+    <!-- Data points -->
+    <circle cx="70" cy="85" r="4" fill="#3977da" stroke="#fff" stroke-width="1"/>
+    <circle cx="120" cy="40" r="4" fill="#86a6d5" stroke="#fff" stroke-width="1"/>
+    <circle cx="210" cy="35" r="4" fill="#3977da" stroke="#fff" stroke-width="1"/>
+
+    <text x="25" y="20" fill="#86a6d5" font-family="monospace" font-size="9">H(X) = 7.924 bits/byte</text>
+  </g>
+
+  <!-- Right: Hex Density & Anomaly Score -->
+  <g transform="translate(310, 80)">
+    <rect x="0" y="0" width="130" height="65" rx="6" fill="#0c1b38" stroke="#3977da" stroke-width="1"/>
+    <text x="12" y="22" fill="#86a6d5" font-family="sans-serif" font-size="9" text-transform="uppercase">Entropy State</text>
+    <text x="12" y="44" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="bold">Compressed / High</text>
+    <rect x="12" y="52" width="105" height="4" rx="2" fill="#065ec0"/>
+    <rect x="12" y="52" width="85" height="4" rx="2" fill="#3977da"/>
+
+    <rect x="0" y="80" width="130" height="70" rx="6" fill="#050e1f" stroke="#065ec0" stroke-width="1"/>
+    <text x="10" y="100" fill="#3977da" font-family="monospace" font-size="8">4D 5A 90 00 03 00</text>
+    <text x="10" y="115" fill="#86a6d5" font-family="monospace" font-size="8">00 00 04 00 00 00</text>
+    <text x="10" y="130" fill="#ffffff" font-family="monospace" font-size="8">FF FF 00 00 B8 00</text>
+  </g>
+</svg>
